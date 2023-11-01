@@ -1,0 +1,59 @@
+kendaraan = ["supraMK4", "mobil", "toyota", 3000]
+print("nama kendaraan :", kendaraan[0])
+print("jenis kendaraan :", kendaraan[1])
+print("merk kendaraan :", kendaraan[2])
+print("cc kendaraan :", kendaraan[3])
+kendaraan.append("Hitam")
+print("warna kendaraan", kendaraan[4])
+kendaraan.insert(3,"2.19_Miliyar")
+print("harga kendaraan :", kendaraan[3])
+kendaraan.insert(2, "empat roda")
+print("ban kendaraan :", kendaraan[2])
+kendaraan.remove("mobil")
+print(kendaraan)
+
+luas= input(""" Hitunglah luas dari bangun ruang dibawah ini
+===================================
+1.luas persegi
+2.luas lingkaran
+3.luas segitiga  
+4.luas tabung 
+5.luas persegi panjang
+====================================
+silahkan pilih? 
+""")
+
+match  luas :
+    case "1" :
+       print("menghitung luas persegi")
+       sisi = int(input("masukan sisi?"))
+       luasP =int(sisi*sisi)
+       print("luas persegi adalah", luasP)
+    case "2" :
+        print("menghitung luas lingkaran") 
+        jari = float(input("masukan jari-jari"))
+        luasL = float(3.14*jari*jari)
+        print("luas lingkaran adalah", luasL)
+    case "3" :
+        print("menghitung luas segitiga")
+        alas =int(input("masukan alas "))
+        tinggi =int(input("masukan tinggi"))
+        luasS =int(alas*tinggi/2)
+        print("luas segitiga adalah", luasS)
+    case "4":
+        print("menghitung lias tabung")
+        jari = float(input("masukan jari-jari"))
+        tinggi = float(input("masukan tinggi"))
+        asiap = (jari+tinggi)
+        luasT =float(2*3.14*jari*asiap)
+        print("luas tabung adalah", luasT)
+    case "5":
+        print("menghitung luas persegi panjang")
+        panjang = int(input("masukan panjang"))
+        lebar = int(input("masukan lebar"))
+        luasPP = int(panjang*lebar)
+        print("luas persegi panjang adalah", luasPP)
+    case _:
+        print("pilihan dicuri maling")
+   
+    
